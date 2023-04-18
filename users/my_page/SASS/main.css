@@ -1,0 +1,81 @@
+/*# sourceMappingURL=main.css.map */
+* {
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+
+a{text-decoration: none;}
+
+/* ヘッダー */
+header{background-color: #3eb370;
+        }
+
+header img{width: 5vw;
+           margin: 1vw;
+           margin-left: 2vw;}
+
+.wrapper{
+        display: flex;}
+
+/* アーティクル */
+article{width: 90%;}
+
+button{background-color: #eb6100;
+        color: #fff;
+        border: none;
+        border-radius: 0.5rem;
+        width: 100px;}
+
+button:hover{opacity: 0.5;}
+
+.youser_img{width: 75vw;
+            margin: 1vw auto;
+            position: relative;}
+
+.youser_img img{object-fit: cover;
+                width: 100%;
+                height: 30vh;}
+
+.top_img{position: relative;
+        position: absolute;
+        top: 10vh;
+        right: 130vh;}
+
+.top_img img{width: 15vw;
+                 height: 15vw;
+                 object-fit: cover;
+                 border-radius: 50%;}
+
+.info_box{display: flex;
+            margin-left: 27vw;}
+
+.info_box button{margin-left: 36vw;}
+
+.youser_info p{margin-left: 27vw;
+                margin-top: 1vh;}
+
+.intro{margin: 2vw 25vw 0vw;
+       font-size: 1.1vw;}
+
+
+
+/* ナビ */
+nav {width: 10%;}
+
+nav li{list-style: none;
+        }
+
+.nav_box{width: 5vw;
+        height: 5vw;
+        background-color: rgb(200, 200, 248); 
+        border-radius: 50%;
+        margin-top: 3vw;
+        }
+
+.nav_box p{text-align: center;
+            padding-top: 1.4vw;}
+
+
+
+

@@ -1,0 +1,98 @@
+<?php
+session_start();
+// セッション変数 $_SESSION["loggedin"]を確認。ログイン済だったらウェルカムページへリダイレクト
+if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
+    header("location: login.php");
+    exit;
+}?>
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/header_nav.css">
+    <link rel="stylesheet" href="./css/home_tab.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <script src="./Javascript/home_tab.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <a href="../index.html"><img src="image/HEW2022_Top_Logo (1).svg" alt=""></a>
+        <h1></h1>
+    </header>
+
+<div class="wrapper">
+    
+<article>
+    <div>
+        <div class="youser_img">
+            <!-- <img src=$Home_photo alt="" id="Home_images"> -->
+            <img src="image/test_home.jpg" alt="" id="Home_images">
+            <!-- <img src=$Top_photo alt="" id="Top_images"> -->
+            <span class="top_img"><img src="image/test_top.jpg" alt="" id="Top_images"></span>
+        </div>
+        
+        <div class="youser_info">
+            <span class="info_box">
+                <h2 id="youser_name">
+                <?php echo htmlspecialchars($_SESSION["name"]); ?>
+                </h2>
+                <button class="follow" id="" >フォロー登録</button>                 
+            </span>
+
+            <p id="">フォロワー数</p> 
+        </div>
+        
+        <p class="intro">自己紹介aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+
+    
+        <div class="tab_panel">
+            <ul class="tab-group">
+                <li class="tab tab-A is-active">動画</li>
+                <li class="tab tab-B">画像</li>
+                <li class="tab tab-C">コミュ二ティ</li>
+                <li class="tab tab-D">いいね</li>
+            </ul>
+
+            <div class="panel-group">
+                <div class="panel tab-A is-show">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/MmB9b5njVbA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="panel tab-B">
+                    <img src="image/test_top.jpg" alt="">
+                </div>
+                <div class="panel tab-C">
+                    <p>コミュニティ</p>
+                </div>
+                <div class="panel tab-D">
+                    <p>いいね</p>
+                </div>
+            </div>
+        </div>
+       
+    </div> 
+</article>
+
+<!--<nav>
+    <ul>
+        <li><a href="../index.html"><div class="nav_box"><p>top</p></div></a></li>
+        <li><a href="Top_page.html"><div class="nav_box"><p>mypage</p></div></a></li>
+        <li><a href=""><div class="nav_box"><p>dm</p></div></a></li>
+        <li><a href="../contents/make/input.php"><div class="nav_box"><p>制作</p></div></a></li>
+    </ul>
+</nav>-->
+</div>
+    
+</body>
+
+<script src="./JavaScript/main.js"></script>
+
+</html>
+<?php
+//}
+?>
